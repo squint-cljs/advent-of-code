@@ -13,3 +13,10 @@ $ node node_modules/.bin/clava run 2021/aoc01_borkdude.cljs
 ```
 
 to compile and run a solution.
+
+After compilation you should be able to run the solution with Node.js (or bun) only:
+
+
+```
+$ node 2021/aoc01_borkdude.mjs
+```

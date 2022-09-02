@@ -2,7 +2,7 @@
   (:require ["fs" :as fs]))
 
 (def input
-  (mapv js/parseInt (.split (.trim (str (fs/readFileSync "2021/input/aoc01.txt"))) "\n")))
+  (mapv js/parseInt (.split (.trim (fs/readFileSync "2021/input/aoc01.txt" "utf-8")) "\n")))
 
 (defn increases [nums]
   (filter true?
