@@ -1,14 +1,11 @@
-(ns aoc01-borkdude
+(ns day01-borkdude
   (:require ["fs" :as fs]))
 
 (def input
-  (mapv js/parseInt (.split (.trim (fs/readFileSync "2021/input/aoc01.txt" "utf-8")) "\n")))
+  (mapv js/parseInt (.split (.trim (fs/readFileSync "2021/input/day01.txt" "utf-8")) "\n")))
 
 (defn increases [nums]
-  (filter true?
-          (map #(< %1 %2)
-               nums
-               (rest nums))))
+  (filter true? (map #(< %1 %2) nums (rest nums))))
 
 (def answer-01 (time (prn (count (increases input)))))
 
